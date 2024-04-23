@@ -45,9 +45,9 @@ class Fullscreen_Window:
         self.Toolmenu = tk.Menu(self.menubar)
         self.menubar.add_cascade(label= "Tools", menu = self.Toolmenu)
 
-        self.rightclick = tk.Menu(self.tk, tearoff=0)
-        self.rightclick.add_command(label="null", command=None)
-        self.rightclick.add_command(label="Exit", command=self.end)
+        #self.rightclick = tk.Menu(self.tk, tearoff=0)
+        #self.rightclick.add_command(label="null", command=None)
+        #self.rightclick.add_command(label="Exit", command=self.end)
 
 
     def toggle_fullscreen(self, event = None):
@@ -210,7 +210,6 @@ def scd_update(event):
 def _scd_update():
     textvar = scd2_text.label.get(1.0, "end")
     textvar=alphabetise_ws(textvar)
-    print(textvar)
     scd2_label_top3.label.config(text=f"# of Characters = {len(textvar)}")
 
 #functions for transposition with key
@@ -449,8 +448,6 @@ if __name__ == "__main__":
     TM_Button_ST = Buttons(tool_frame_list[1], "Standardise", 0, 3, lambda: stdise())
     TM_Button_clear = Buttons(tool_frame_list[1], "Clear", 0, 4, lambda: TM_clear())
  
-
-    
 
 
     root.fileMenu.add_command(label = "Exit", command = root.end)
