@@ -168,7 +168,7 @@ def Sqc_clear():
 def vc_cypher():
     a=vc_entryA.label.get()
     textvar = vc_text.label.get(1.0, "end")
-    textvar=alphabetise_ws(textvar)
+    textvar=alphabetise(textvar)
     vc_text.label.delete(1.0, "end")
     vc_text.label.insert(1.0, vigenere_cypher(a,textvar))
 
@@ -231,7 +231,7 @@ def td_clear():
 def vcd_decypher():
     a=vcd_entryA.label.get()
     textvar = vcd_text.label.get(1.0, "end")
-    textvar=alphabetise_ws(textvar)
+    textvar=alphabetise(textvar)
     vcd_text.label.delete(1.0, "end")
     vcd_text.label.insert(1.0, vigenere_decypher(a,textvar))
 
